@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_screen_logo"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_50dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnRegisterMain"
+                android:layout_width="@dimen/dimen_300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/dimen_12sp"
+                android:textColor="@color/theme_blue"
+                android:textStyle="bold"
+                android:background="@drawable/button_background_outline"
+                android:text="New User ?? Register Now !!"/>
+
+            <Button
+                android:id="@+id/btnLoginMain"
+                android:layout_width="@dimen/dimen_300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:textStyle="bold"
+                android:background="@drawable/button_background"
+                android:textSize="@dimen/dimen_12sp"
+                android:text="Login"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

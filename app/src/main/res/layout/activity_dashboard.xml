@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DashboardActivity">
+
+    <RelativeLayout
+        android:id="@+id/rvContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottom_bar_admin"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        layout="@layout/bottom_bar"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        android:id="@+id/bottom_bar_dealer"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        layout="@layout/bottom_bar_dealer"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        android:id="@+id/bottom_bar_users"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        layout="@layout/bottom_bar_users"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/frag_app_bar"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
+            android:src="@drawable/wallet_commission"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_50dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_32"
+            android:layout_marginRight="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_32dp">
+
+            <TextView
+                android:id="@+id/tvCommision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Commission :"
+                android:layout_gravity="bottom"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignBaseline="@+id/etSettingValue"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/etSettingValue"
+                android:layout_width="@dimen/dimen_220dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="2"
+                android:hint=" eg: 5%"
+                android:layout_toRightOf="@+id/tvCommision"
+                android:textSize="@dimen/dimen_14sp"
+                android:layout_gravity="bottom"
+                android:inputType="number"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnAddCommission"
+            android:layout_width="@dimen/dimen_280"
+            android:layout_height="@dimen/dimen_50dp"
+            android:background="@drawable/button_background"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

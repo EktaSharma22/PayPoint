@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Pargati</string>
+    <string name="paypoint">PayPoint</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="email_id">Email Id</string>
+    <string name="or_use_social_account">-------------- Or use social account --------------</string>
+    <string name="_1_inr_1_6_nr">1 INR = </string>
+    <string name="home">Home</string>
+    <string name="user">User</string>
+    <string name="dealer">Dealer</string>
+    <string name="settings">Settings</string>
+    <string name="my_account">My Account</string>
+    <string name="logout">Logout</string>
+    <string name="submit">Submit</string>
+    <string name="dealer_id">Dealer id</string>
+    <string name="_100">+ ₹ 100</string>
+    <string name="_200">+ ₹ 200</string>
+    <string name="_300">+ ₹ 300</string>
+    <string name="add_money">Add Money</string>
+    <string name="available_balance">Available Balance :</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="current_password">Current Password</string>
+    <string name="user_detailed_information">User Detailed Information</string>
+    <string name="user_type">User Type</string>
+    <string name="display_name">Display Name</string>
+    <string name="please_enter_your_account_number_10_digits">Please enter your account number : 10 digits</string>
+    <string name="account_number">Account Number</string>
+    <string name="ncell">Ncell</string>
+    <string name="setting_value">Setting Value</string>
+    <string name="setting_name_eg_commision">Setting Name eg: Commision</string>
+    <string name="email_or_phone_number">Email or Phone Number</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
+    <string name="already_ac">Already have an account ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="pargati">Pargati</string>
+    <string name="select_user">Select User</string>
+    <string name="kindly_select_the_user_from_the_given_list">Kindly Select the User from the given list</string>
+    <string name="user_id">User Id</string>
+</resources>

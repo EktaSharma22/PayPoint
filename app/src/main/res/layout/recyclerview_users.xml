@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:elevation="12dp"
+        app:cardCornerRadius="14dp"
+        android:layout_margin="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/theme_blue"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="@dimen/dimen_14sp"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/btnMakeDealer"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="make dealer"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/dimen_12sp"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:background="@drawable/button_background"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

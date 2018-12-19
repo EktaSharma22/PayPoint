@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSelectUser"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:elevation="4dp"
+        android:background="@drawable/selector_row"
+        android:layout_margin="@dimen/dimen_1"
+        >
+
+        <LinearLayout
+            android:id="@+id/llList"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="@dimen/dimen_24"
+               android:layout_height="@dimen/dimen_24"
+               android:src="@drawable/user"
+               android:layout_marginLeft="@dimen/dimen_5"/>
+
+            <TextView
+                android:id="@+id/tvUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="@color/theme_blue"
+                android:textSize="@dimen/dimen_16"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dimen_5"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

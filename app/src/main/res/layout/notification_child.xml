@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/dimen_70dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewNotification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="14dp"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Requested By:"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_10"/>
+
+                    <TextView
+                        android:id="@+id/tvUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Id"
+                        android:textColor="@color/theme_blue"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount :"
+                        android:textSize="@dimen/dimen_14sp"
+                        android:layout_marginLeft="@dimen/dimen_10"/>
+
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="@dimen/dimen_14sp"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/user_id_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/requested_by_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/paymentmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/chequenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/bankname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/depositdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/filename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/filepath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userid"/>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvViewDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="VIEW DETAILS"
+                android:gravity="end|center"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:textColor="@color/theme_blue"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

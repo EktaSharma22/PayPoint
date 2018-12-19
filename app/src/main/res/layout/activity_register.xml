@@ -1,0 +1,193 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/dimen_150dp"
+            android:layout_height="@dimen/d_118"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="@dimen/d_5"
+            />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_below="@+id/ivLogo"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/theme_blue"
+            />
+
+        <LinearLayout
+            android:id="@+id/llNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tvLogin"
+            android:layout_marginLeft="@dimen/dimen_32"
+            android:layout_marginRight="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_gravity="center">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/name_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:drawableLeft="@drawable/email_icon"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:textSize="14sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llNameRegister"
+            android:layout_marginLeft="@dimen/dimen_32"
+            android:layout_marginRight="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_gravity="center">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_register_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etEmailRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:textSize="14sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llPhoneRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llEmailRegister"
+            android:layout_marginLeft="@dimen/dimen_32"
+            android:layout_marginRight="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_gravity="center">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mobile_register_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etMobileRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:hint="@string/phone_number"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:textSize="14sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llPhoneRegister"
+            android:layout_marginLeft="@dimen/dimen_32"
+            android:layout_marginRight="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_gravity="center">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_register_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPasswordRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:drawableLeft="@drawable/lock"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:textSize="14sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_46"
+            android:layout_gravity="center"
+            android:text="@string/register"
+            android:layout_below="@+id/llPasswordRegister"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            android:layout_marginLeft="@dimen/dimen_32dp"
+            android:layout_marginRight="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@drawable/button_background"/>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/bottom_signin_bar"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

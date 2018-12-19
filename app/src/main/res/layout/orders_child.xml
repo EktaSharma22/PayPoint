@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/dimen_120dp">
+
+    <RelativeLayout
+        android:id="@+id/rvSettingsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/tvOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:text="Order Number :"/>
+
+        <TextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="987654321"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_toRightOf="@+id/tvOrder"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 :10 PM"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_below="@+id/tvOrder"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16 Oct, 2018"
+            android:layout_toRightOf="@+id/tvTime"
+            android:layout_below="@+id/tvOrder"/>
+
+        <ImageView
+            android:id="@+id/imgSettings"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_below="@+id/tvTime"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:src="@drawable/mobile"/>
+
+        <TextView
+            android:id="@+id/tvOrderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgSettings"
+            android:layout_below="@+id/tvDate"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="Recharge ? Bill Payment"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:textSize="@dimen/dimen_12sp"
+            />
+
+        <TextView
+            android:id="@+id/tvSettingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgSettings"
+            android:layout_below="@+id/tvOrderType"
+            android:text="Payment Successful"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:textSize="@dimen/dimen_12sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:text="₹ 783.20"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/light_grey"
+        android:layout_gravity="bottom"/>
+
+
+</android.support.v7.widget.CardView>

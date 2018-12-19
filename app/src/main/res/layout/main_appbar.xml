@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/main_screen_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pargati"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/dimen_20"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/tvINR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_inr_1_6_nr"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_2dp"
+            />
+
+        <TextView
+            android:id="@+id/tvNRrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.6"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/tvINR"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_2dp"
+            />
+
+        <TextView
+            android:id="@+id/NR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvNRrate"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:text="NR"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/refresh"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/NR"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

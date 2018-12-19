@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_80dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginLeft="@dimen/dimen_20"
+    android:layout_marginRight="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:background="@drawable/linear_layout_background">
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summary Reports"
+        android:textSize="@dimen/dimen_18sp"
+        android:padding="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_40"
+        android:textStyle="bold"
+        android:textColor="@color/theme_blue" />
+
+</LinearLayout>
