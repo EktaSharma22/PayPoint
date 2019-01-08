@@ -1,4 +1,4 @@
-package com.example.ganesha.paypoint.activities;
+package com.gws.pargati.paypoint.activities;
 
 import android.Manifest;
 import android.app.DatePickerDialog;
@@ -18,7 +18,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -37,13 +36,13 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.bumptech.glide.Glide;
-import com.example.ganesha.paypoint.BuildConfig;
-import com.example.ganesha.paypoint.R;
-import com.example.ganesha.paypoint.adapters.UploadDealerUserAdapter;
-import com.example.ganesha.paypoint.api.RetrofitClient;
-import com.example.ganesha.paypoint.model.UploadUserTypeResponse;
-import com.example.ganesha.paypoint.model.WalletRequestResponse;
-import com.example.ganesha.paypoint.storage.SharedPrefManager;
+import com.gws.pargati.paypoint.BuildConfig;
+import com.gws.pargati.paypoint.R;
+import com.gws.pargati.paypoint.adapters.UploadDealerUserAdapter;
+import com.gws.pargati.paypoint.api.RetrofitClient;
+import com.gws.pargati.paypoint.model.UploadUserTypeResponse;
+import com.gws.pargati.paypoint.model.WalletRequestResponse;
+import com.gws.pargati.paypoint.storage.SharedPrefManager;
 
 import org.json.JSONArray;
 
@@ -97,6 +96,7 @@ public class UploadActivity extends AppCompatActivity implements
     private RadioGroup radioGroupMode;
     private RadioGroup radioGroupUser;
     private RadioButton radioButton;
+    private RadioButton radioButtonMe,radioButtonUser, radioButtonDealer;
     private LinearLayout llSelectUsersSpinner, llUploadData;
     private LinearLayout llAmount, llDateofDeposit, llChequeNumber, llBankNumber, llImageMode;
     private int mYear, mMonth, mDay;
@@ -153,12 +153,24 @@ public class UploadActivity extends AppCompatActivity implements
         llBankNumber = (LinearLayout)findViewById(R.id.llBankNumber);
         llImageMode = (LinearLayout)findViewById(R.id.llImageMode);
         ivUpload = (ImageView)findViewById(R.id.ivUpload);
-      //  userID = (TextView)findViewById(R.id.userID);
-
-
-
+        radioButtonMe = (RadioButton)findViewById(R.id.radioButtonMe);
+        radioButtonUser = (RadioButton) findViewById(R.id.radioButtonUser);
+        radioButtonDealer = (RadioButton) findViewById(R.id.radioButtonDealer);
         spinner = (Spinner)findViewById(R.id.spinner);
 
+      //  userID = (TextView)findViewById(R.id.userID);
+
+        String user_type = SharedPrefManager.getInstance(UploadActivity.this).getUser().getUser_type();
+
+        if(user_type.equals("dealer"))
+        {
+            radioButtonDealer.setVisibility(View.GONE);
+        }
+        else if(user_type.equals("user"))
+        {
+            radioButtonDealer.setVisibility(View.GONE);
+            radioButtonUser.setVisibility(View.GONE);
+        }
 
         ////////////////////////////////////////////////////
 
@@ -340,7 +352,7 @@ public class UploadActivity extends AppCompatActivity implements
                 tv_result.setText(radioText);
                 String mode = tv_result.getText().toString().trim();
 
-                if(mode.equals("cash"))
+                if(mode.equals("Cash"))
                 {
                     llAmount.setVisibility(View.VISIBLE);
                     llDateofDeposit.setVisibility(View.VISIBLE);
@@ -350,7 +362,7 @@ public class UploadActivity extends AppCompatActivity implements
                     llBankNumber.setVisibility(View.GONE);
                     llChequeNumber.setVisibility(View.GONE);
                 }
-                if(mode.equals("cheque"))
+                if(mode.equals("Cheque"))
                 {
                     llAmount.setVisibility(View.VISIBLE);
                     llDateofDeposit.setVisibility(View.VISIBLE);
@@ -781,6 +793,11 @@ public class UploadActivity extends AppCompatActivity implements
                             hidepDialog();
                             WalletRequestResponse serverResponse = response.body();
                             Toast.makeText(getApplicationContext(), serverResponse.getMessage(), Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(UploadActivity.this, DashboardActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
                         }
                     }else {
                         hidepDialog();
