@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "979493833479",
+    "firebase_url": "https://pargati.firebaseio.com",
+    "project_id": "pargati",
+    "storage_bucket": "pargati.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979493833479:android:4726cba03b00e6fb",
+        "android_client_info": {
+          "package_name": "com.gws.pargati.paypoint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979493833479-g8hn1hef0e43gl513umah2f9jisu83sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3enAWqplUF86Jn5tFKCTEGXlHBdL7dhI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

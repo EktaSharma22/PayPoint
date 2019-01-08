@@ -79,7 +79,7 @@
                     android:ems="10"
                     android:hint="Mobile"
                     android:textSize="@dimen/dimen_14sp"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:drawableLeft="@drawable/call"
                     android:drawablePadding="@dimen/dimen_8"
                     />

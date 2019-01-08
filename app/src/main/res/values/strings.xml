@@ -41,4 +41,22 @@
     <string name="select_user">Select User</string>
     <string name="kindly_select_the_user_from_the_given_list">Kindly Select the User from the given list</string>
     <string name="user_id">User Id</string>
+    <string name="please_enter_your_mobile_number">Please Enter your Mobile Number</string>
+    <string name="enter_date">Enter Date</string>
+    <string name="amount_deposit_mode">Amount Deposit Mode</string>
+    <string name="cash">Cash</string>
+    <string name="cheque">Cheque</string>
+    <string name="amount">Amount (₹)</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="date_of_deposit">Date of Deposit</string>
+    <string name="cheque_number">Cheque Number</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="discover_the_most_convinient_and_easy_way_to_recharge_and_pay_bills">Discover the most convinient and easy way to recharge and pay bills</string>
+    <string name="skip">Skip</string>
+    <string name="your_personal_data_and_information_is_completely_safe_and_secure">Your personal data and information is completely safe and secure</string>
+    <string name="super_fast">Super fast</string>
+    <string name="hassle_free_and_super_fast_payments">Hassle free and super fast payments !</string>
+    <string name="ok_i_got_it">Ok, I got it !</string>
+    <string name="users">Users</string>
+    <string name="dealers">Dealers</string>
 </resources>

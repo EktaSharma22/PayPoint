@@ -146,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
-                    android:text="Notification"/>
+                    android:text="Notifications"/>
 
             </LinearLayout>
 

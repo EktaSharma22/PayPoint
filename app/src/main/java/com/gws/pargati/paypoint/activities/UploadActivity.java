@@ -66,7 +66,6 @@ import retrofit2.Response;
 public class UploadActivity extends AppCompatActivity implements
         View.OnClickListener
 {
-
     ImageView ivBack, ivAddUsers, ivUpload;
     TextView tvTitle;
 

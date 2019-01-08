@@ -3,9 +3,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.ganesha.paypoint"
+        applicationId "com.gws.pargati.paypoint"
         minSdkVersion 16
         targetSdkVersion 28
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -37,8 +38,25 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.3.2'
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
 
+    compile 'me.relex:circleindicator:1.2.2@aar'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.18.5"
+
     implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+}
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://jitpack.io' }
 }

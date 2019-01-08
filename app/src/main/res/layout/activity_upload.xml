@@ -78,7 +78,7 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="User"
+                        android:text="@string/user"
                         android:id="@+id/radioButtonUser"
                         android:checked="false"
                         android:layout_marginLeft="@dimen/dimen_20"
@@ -88,7 +88,7 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dealer"
+                        android:text="@string/dealer"
                         android:id="@+id/radioButtonDealer"
                         android:checked="false"
                         android:layout_marginLeft="@dimen/dimen_20"
@@ -149,7 +149,7 @@
                 android:id="@+id/tvAmtDepositMode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amount Deposit Mode"
+                android:text="@string/amount_deposit_mode"
                 android:visibility="gone"
                 android:textColor="@color/theme_blue"
                 android:layout_gravity="center_horizontal"
@@ -176,7 +176,7 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="cash"
+                        android:text="@string/cash"
                         android:id="@+id/rb_cash"
                         android:checked="false"
                         android:textSize="@dimen/dimen_12sp" />
@@ -184,7 +184,7 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="cheque"
+                        android:text="@string/cheque"
                         android:id="@+id/rb_cheque"
                         android:checked="false"
                         android:layout_marginLeft="@dimen/dimen_20"
@@ -224,7 +224,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Amount (₹)"
+                        android:text="@string/amount"
                         android:textSize="@dimen/dimen_12sp"
                         android:layout_weight="1"
                         android:textColor="@color/black"
@@ -234,7 +234,7 @@
                         android:id="@+id/etAmount"
                         android:layout_width="@dimen/dimen_100dp"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Amount"
+                        android:hint="@string/enter_amount"
                         android:inputType="number"
                         android:layout_weight="0.8"
                         android:textSize="@dimen/dimen_12sp"/>
@@ -257,7 +257,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Date of Deposit"
+                        android:text="@string/date_of_deposit"
                         android:textSize="@dimen/dimen_12sp"
                         android:textColor="@color/black"
                         android:layout_weight="1"
@@ -268,7 +268,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/in_date"
                         android:layout_weight="1.2"
-                        android:hint="Enter Date"
+                        android:hint="@string/enter_date"
+                        android:editable="false"
                         android:textSize="@dimen/dimen_12sp"
                         />
 
@@ -298,7 +299,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Cheque Number"
+                        android:text="@string/cheque_number"
                         android:textColor="@color/black"
                         android:textSize="@dimen/dimen_12sp"
                         android:layout_weight="1"
@@ -308,7 +309,7 @@
                         android:id="@+id/etChequeNumber"
                         android:layout_width="@dimen/dimen_100dp"
                         android:layout_height="wrap_content"
-                        android:hint="Cheque Number"
+                        android:hint="@string/cheque_number"
                         android:inputType="number"
                         android:layout_weight="0.8"
                         android:textSize="@dimen/dimen_12sp"/>
@@ -330,7 +331,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Bank Name"
+                        android:text="@string/bank_name"
                         android:textColor="@color/black"
                         android:layout_weight="1"
                         android:textSize="@dimen/dimen_12sp"
@@ -340,7 +341,7 @@
                         android:id="@+id/etBankName"
                         android:layout_width="@dimen/dimen_100dp"
                         android:layout_height="wrap_content"
-                        android:hint="Bank Name"
+                        android:hint="@string/bank_name"
                         android:layout_weight="0.8"
                         android:textSize="@dimen/dimen_12sp"/>
 
