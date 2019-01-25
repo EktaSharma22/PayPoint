@@ -1,6 +1,7 @@
 package com.gws.pargati.paypoint.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.gws.pargati.paypoint.R;
 
 public class PaymentSuccessFragment extends Fragment implements View.OnClickListener{
@@ -53,6 +53,7 @@ public class PaymentSuccessFragment extends Fragment implements View.OnClickList
 
         tvtitle.setText("Payment Successful");
         ivAddUsers.setImageResource(R.drawable.ic_share_white_24dp);
+        ivAddUsers.setOnClickListener(this);
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +81,15 @@ public class PaymentSuccessFragment extends Fragment implements View.OnClickList
                fragmentTransaction.replace(R.id.rvContainer, homeFragment);
                fragmentTransaction.addToBackStack(null);
                fragmentTransaction.commit();
+               break;
+
+           case R.id.ivAddUsers:
+               Intent sendIntent = new Intent();
+               sendIntent.setAction(Intent.ACTION_SEND);
+               sendIntent.putExtra(Intent.EXTRA_TEXT,
+                       "Hey check out my app at: https://play.google.com/store/apps/details?id=");
+               sendIntent.setType("text/plain");
+               startActivity(sendIntent);
                break;
        }
     }

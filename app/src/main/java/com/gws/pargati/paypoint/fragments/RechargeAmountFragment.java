@@ -40,6 +40,8 @@ public class RechargeAmountFragment extends Fragment implements View.OnClickList
     TextView tvMobileNumber,tvProviderName;
     ImageView ivRechargeIcon;
     LinearLayout llAmountEdit, llAmountDrop;
+    ImageView ivBack, ivAddUsers;
+    TextView tvTitle;
 
     @Nullable
     @Override
@@ -51,6 +53,18 @@ public class RechargeAmountFragment extends Fragment implements View.OnClickList
         ivRechargeIcon = (ImageView)view.findViewById(R.id.ivRechargeIcon);
         llAmountEdit = (LinearLayout)view.findViewById(R.id.llAmountEdit);
         llAmountDrop = (LinearLayout)view.findViewById(R.id.llAmountDrop);
+        ivBack = (ImageView)view.findViewById(R.id.ivBack);
+        ivAddUsers = (ImageView)view.findViewById(R.id.ivAddUsers);
+        tvTitle = (TextView)view.findViewById(R.id.tvTitle);
+        ivAddUsers.setVisibility(View.GONE);
+        tvTitle.setText("Recharge");
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
         submitMobile();
         return view;
     }
@@ -92,6 +106,7 @@ public class RechargeAmountFragment extends Fragment implements View.OnClickList
                     String mobile = lr.getMobile();
                     String provider_name = lr.getData().getProvider_name();
                     String image = lr.getData().getImage();
+                    String id = lr.getData().get_id();
 
                     tvMobileNumber.setText(mobile);
                     tvProviderName.setText(provider_name);

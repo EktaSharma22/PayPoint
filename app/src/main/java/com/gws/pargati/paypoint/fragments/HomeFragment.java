@@ -183,8 +183,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 break;
 
             case R.id.llUploads:
-                Intent intentupload = new Intent(getContext(),UploadActivity.class);
-                startActivity(intentupload);
+                UploadFragment uploadFragment = new UploadFragment();
+                FragmentManager fragmentManagerupload = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransactionupload = fragmentManagerupload.beginTransaction();
+                fragmentTransactionupload.replace(R.id.rvContainer, uploadFragment);
+                fragmentTransactionupload.addToBackStack(null);
+                fragmentTransactionupload.commit();
                 break;
 
            /* case R.id.llRechargeBill:

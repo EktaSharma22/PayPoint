@@ -55,8 +55,8 @@ public class MyAccountFragment  extends Fragment {
         String email = SharedPrefManager.getInstance(getActivity()).getUser().getEmail();
         tvEmail.setText(email);
 
-        /*String mobile = String.valueOf(SharedPrefManager.getInstance(getActivity()).getUser().getMobile());
-        tvMobile.setText(mobile);*/
+        String mobile = SharedPrefManager.getInstance(getActivity()).getUser().getMobile();
+        tvMobile.setText(mobile);
 
         String user_type = SharedPrefManager.getInstance(getActivity()).getUser().getUser_type();
         tvUserType.setText(user_type);

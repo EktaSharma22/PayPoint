@@ -78,8 +78,8 @@ public class RechargeBillFragment extends Fragment {
                 @Override
                 public void onResponse(Call<ServiceProviderAllResponse> call, Response<ServiceProviderAllResponse> response) {
                     List<ServiceCategory> items = response.body().getData();
-                 //   LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-                    mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                    LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+                    mRecyclerView.setLayoutManager(horizontalLayoutManagaer);
                     mRecyclerView.setAdapter(new RechargeServiceAdapter(getContext(),items));
                     mRecyclerView.smoothScrollToPosition(0);
 
