@@ -47,6 +47,8 @@ public class RechargeServiceAdapter extends RecyclerView.Adapter<RechargeService
             viewHolder.title.setText(servicecat.getProvider_name());
             Glide.with(context).load(AccessDetails.serviceurl + servicecat.getImage())
                     .placeholder(R.drawable.loading).into(viewHolder.imageView);
+
+
             viewHolder.llService.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -56,6 +58,14 @@ public class RechargeServiceAdapter extends RecyclerView.Adapter<RechargeService
 
                     SharedPreferences preferences = context.getSharedPreferences("MY_CAT_ID",Context.MODE_PRIVATE);
                     preferences.edit().putString("CATEGORYID",cat_id).apply();
+
+                    SharedPreferences prefs = context.getSharedPreferences("IMAGE",Context.MODE_PRIVATE);
+                    prefs.edit().putString("IMAGEID",AccessDetails.serviceurl + servicecat.getImage()).apply();
+
+                    SharedPreferences pref = context.getSharedPreferences("NAME",Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("PNAME", servicecat.getProvider_name());
+                    editor.apply();
 
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
                     Fragment myFragment = new ServiceDetailFragment();

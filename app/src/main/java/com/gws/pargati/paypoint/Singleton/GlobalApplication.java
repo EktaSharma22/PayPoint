@@ -10,6 +10,15 @@ public class GlobalApplication  extends Application
     private static GlobalApplication singleton;
     private String userid;
     private String device_token;
+    private String mobileNumber;
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
 
     public String getDevice_token() {
         return device_token;

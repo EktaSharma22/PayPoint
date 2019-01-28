@@ -3,6 +3,7 @@ package com.gws.pargati.paypoint.api;
 import com.gws.pargati.paypoint.model.AddUserResponse;
 import com.gws.pargati.paypoint.model.CategoryResponse;
 import com.gws.pargati.paypoint.model.RechargeCheckResponse;
+import com.gws.pargati.paypoint.model.RechargeStatusResponse;
 import com.gws.pargati.paypoint.model.UploadUserTypeResponse;
 import com.gws.pargati.paypoint.model.LoginResponse;
 import com.gws.pargati.paypoint.model.MakeDealerResponse;
@@ -12,6 +13,7 @@ import com.gws.pargati.paypoint.model.UserResponse;
 import com.gws.pargati.paypoint.model.WalletApproveResponse;
 import com.gws.pargati.paypoint.model.WalletNotificationResponse;
 import com.gws.pargati.paypoint.model.WalletRequestResponse;
+import com.gws.pargati.paypoint.model.WorldlinkResponse;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -128,6 +130,22 @@ public interface Api
             @Header("token") String token,
             @Field("mobile") String mobile,
             @Field("service_provider") String service_provider
+    );
+
+    @FormUrlEncoded
+    @POST("recharge/online/payment")
+    Call<RechargeStatusResponse> recharge(
+            @Header("token") String token,
+            @Field("mobile_number") String mobile_number,
+            @Field("service_provider") String service_provider,
+            @Field("amount") int amount
+    );
+
+    @FormUrlEncoded
+    @POST("recharge/worldlink/bill/query")
+    Call<WorldlinkResponse> query(
+            @Header("token") String token,
+            @Field("msisdn") String msisdn
     );
 
 }

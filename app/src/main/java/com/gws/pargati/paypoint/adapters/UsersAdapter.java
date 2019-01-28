@@ -43,7 +43,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     @Override
     public void onBindViewHolder(@NonNull UsersViewHolder holder, final int position) {
         final GetUsersData user = userList.get(position);
-        holder.textViewName.setText(user.getName());
+        String name = user.getName().substring(0,1).toUpperCase() + user.getName().substring(1);
+        holder.textViewName.setText(name);
         holder.textViewEmail.setText(user.getEmail());
         holder.btnMakeDealer.setOnClickListener(new View.OnClickListener() {
             @Override

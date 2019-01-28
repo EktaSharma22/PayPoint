@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gws.pargati.paypoint.R;
@@ -33,6 +35,8 @@ public class UserFragment extends Fragment
     private RecyclerView recyclerView;
     private UsersAdapter adapter;
     private List<GetUsersData> userList;
+    private TextView tvAdd;
+    private RelativeLayout rlAddUser;
 
     @Nullable
     @Override
@@ -40,8 +44,12 @@ public class UserFragment extends Fragment
         //  recyclerView.setAdapter(new UsersAdapter(getActivity(),userList));
         View view = inflater.inflate(R.layout.fragment_user, container, false);
 
-        ivAddUsers = (ImageView)view.findViewById(R.id.ivAddUsers);
-        ivAddUsers.setOnClickListener(new View.OnClickListener() {
+        tvAdd = (TextView)view.findViewById(R.id.tvAdd);
+        tvAdd.setVisibility(View.VISIBLE);
+        rlAddUser = (RelativeLayout)view.findViewById(R.id.rlAddUser);
+
+        ivAddUsers = (ImageView) view.findViewById(R.id.ivAddUsers);
+        rlAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AddUsersFragment addUsersFragment = new AddUsersFragment();

@@ -30,27 +30,29 @@ import com.gws.pargati.paypoint.api.RetrofitClient;
 import com.gws.pargati.paypoint.model.RechargeCheckResponse;
 import com.gws.pargati.paypoint.model.RechargeStatusResponse;
 import com.gws.pargati.paypoint.model.UploadUserTypeResponse;
+import com.gws.pargati.paypoint.model.WorldlinkResponse;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ServiceDetailFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    private EditText etMobile;
-    private Button btnSubmitMobile,btnRecharge;
+    private EditText etMobile,etUserrId;
+    private Button btnSubmitMobile,btnRecharge,btnSubmitUserId;
     ImageView ivBack, ivAddUsers;
     TextView tvTitle, tvEnterMobile;
     private LinearLayout llEnterMobile,llRechargeDetails;
     Spinner spinnerAmt;
     TextView tvMobileNumber,tvProviderName;
     ImageView ivRechargeIcon;
-    LinearLayout llAmountEdit, llAmountDrop;
+    LinearLayout llAmountEdit, llAmountDrop,llEnterUserId;
 
     @Nullable
     @Override
@@ -75,6 +77,9 @@ public class ServiceDetailFragment extends Fragment implements View.OnClickListe
         ivAddUsers = (ImageView)view.findViewById(R.id.ivAddUsers);
         tvTitle = (TextView)view.findViewById(R.id.tvTitle);
         btnRecharge = (Button)view.findViewById(R.id.btnRecharge);
+        llEnterUserId = (LinearLayout)view.findViewById(R.id.llEnterUserId);
+        etUserrId = (EditText)view.findViewById(R.id.etUserrId);
+        btnSubmitUserId = (Button)view.findViewById(R.id.btnSubmitUserId); 
 
         SharedPreferences preferences = getActivity().getSharedPreferences("IMAGE",Context.MODE_PRIVATE);
         String image  = preferences.getString("IMAGEID",null);
@@ -96,8 +101,21 @@ public class ServiceDetailFragment extends Fragment implements View.OnClickListe
             }
         });
 
+        SharedPreferences p = getActivity().getSharedPreferences("MY_CAT_ID",Context.MODE_PRIVATE);
+        String id = p.getString("CATEGORYID",null);
+
+        if (id.equals("5c4e96a53ff0862189bf8738"))
+        {
+           llEnterUserId.setVisibility(View.VISIBLE);
+        }
+        else
+            {
+                llEnterMobile.setVisibility(View.VISIBLE);
+            }
+
         view.findViewById(R.id.btnSubmitMobile).setOnClickListener(this);
         view.findViewById(R.id.btnRecharge).setOnClickListener(this);
+        view.findViewById(R.id.btnSubmitUserId).setOnClickListener(this);
         spinnerAmt.setOnItemSelectedListener(this);
 
 
@@ -121,7 +139,46 @@ public class ServiceDetailFragment extends Fragment implements View.OnClickListe
 
             case R.id.btnRecharge:
                 status();
+                break;
+                
+            case R.id.btnSubmitUserId :
+                checkQuery();
+                break;
         }
+    }
+
+    private void checkQuery()
+    {
+        SharedPreferences preferences = getActivity().getSharedPreferences("MY_APP",Context.MODE_PRIVATE);
+        String retrivedToken  = preferences.getString("TOKEN",null);
+
+        String user_id = etUserrId.getText().toString();
+
+        Call<WorldlinkResponse> call = RetrofitClient.getmInstance()
+                .getApi()
+                .query(retrivedToken,user_id);
+        call.enqueue(new Callback<WorldlinkResponse>() {
+            @Override
+            public void onResponse(Call<WorldlinkResponse> call, Response<WorldlinkResponse> response)
+            {
+                if(response.code() == 200)
+                {
+                    Toast.makeText(getContext(),"Success",Toast.LENGTH_SHORT).show();
+                }
+                  else
+                      {
+                          Toast.makeText(getContext(),"Something Wrong",Toast.LENGTH_SHORT).show();
+                      }
+            }
+
+            @Override
+            public void onFailure(Call<WorldlinkResponse> call, Throwable t) {
+
+            }
+        });
+
+
+
     }
 
     @Override

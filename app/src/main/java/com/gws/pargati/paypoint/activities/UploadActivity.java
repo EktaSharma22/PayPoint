@@ -432,6 +432,7 @@ public class UploadActivity extends AppCompatActivity implements
                             txtDate.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
                         }
                     }, mYear, mMonth, mDay);
+            datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
             datePickerDialog.show();
         }
 

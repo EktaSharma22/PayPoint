@@ -32,7 +32,9 @@ public class DealerUsersAdapter extends RecyclerView.Adapter<DealerUsersAdapter.
     @Override
     public void onBindViewHolder(@NonNull DealerUserViewHolder holder, int position) {
         final UploadUserTypeResponse.DealerUsers walletData = walletList.get(position);
-        holder.tvUserId.setText(walletData.getName());
+        String name = walletData.getName().substring(0,1).toUpperCase() + walletData.getName().substring(1);
+        holder.tvUserId.setText(name);
+        holder.tvEmail.setText(walletData.getEmail());
     }
 
     @Override
@@ -41,12 +43,12 @@ public class DealerUsersAdapter extends RecyclerView.Adapter<DealerUsersAdapter.
     }
 
     class DealerUserViewHolder extends RecyclerView.ViewHolder {
-        TextView tvUserId, tvAmount, tvViewDetails;
+        TextView tvUserId, tvEmail, tvViewDetails;
 
         public DealerUserViewHolder(View itemView) {
             super(itemView);
             tvUserId = itemView.findViewById(R.id.tvUserId);
-
-            }
+            tvEmail = itemView.findViewById(R.id.tvEmail);
+        }
     }
 }
