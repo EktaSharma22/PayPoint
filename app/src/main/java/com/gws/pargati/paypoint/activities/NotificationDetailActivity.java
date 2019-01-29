@@ -1,6 +1,7 @@
 package com.gws.pargati.paypoint.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -81,13 +82,11 @@ public class NotificationDetailActivity extends AppCompatActivity implements Vie
         tvBankName.setText(bank);
         tvDepositDate.setText(date);
 
-        Glide.with(this).load(AccessDetails.serviceurl + filepath)
+        Glide.with(this).load(AccessDetails.serviceurl +"/"+filepath)
                 .placeholder(R.drawable.load).into(ivImage);
 
         btnWalletApprove.setOnClickListener(this);
         btnWalletDecline.setOnClickListener(this);
-
-
 
     }
 
@@ -112,6 +111,7 @@ public class NotificationDetailActivity extends AppCompatActivity implements Vie
 
                         WalletApproveResponse wr = response.body();
                         Toast.makeText(NotificationDetailActivity.this,wr.getMessage(),Toast.LENGTH_SHORT).show();
+                        dashBoard();
                     }
 
                     @Override
@@ -128,4 +128,22 @@ public class NotificationDetailActivity extends AppCompatActivity implements Vie
         }
 
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(NotificationDetailActivity.this,DashboardActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
+    private void dashBoard()
+    {
+        Intent intent = new Intent(NotificationDetailActivity.this,DashboardActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
 }
