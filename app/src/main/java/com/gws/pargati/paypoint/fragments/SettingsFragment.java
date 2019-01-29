@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.gws.pargati.paypoint.R;
 import com.gws.pargati.paypoint.adapters.SettingsAdapter;
 import com.gws.pargati.paypoint.model.RechargeServices;
+import com.gws.pargati.paypoint.storage.SharedPrefManager;
 
 import java.util.ArrayList;
 
@@ -57,8 +58,22 @@ public class SettingsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ArrayList<RechargeServices> rechargeServices = new ArrayList<>();
-        rechargeServices.add(new RechargeServices(R.drawable.wallet,"Wallet Commission"));
-        rechargeServices.add(new RechargeServices(R.drawable.lock,"Change Password"));
+
+        String user_type = SharedPrefManager.getInstance(getContext()).getUser().getUser_type();
+        if(user_type.equals("user"))
+        {
+            rechargeServices.add(new RechargeServices(R.drawable.lock,"Change Password"));
+        }
+        if(user_type.equals("dealer"))
+        {
+            rechargeServices.add(new RechargeServices(R.drawable.lock,"Change Password"));
+            rechargeServices.add(new RechargeServices(R.drawable.wallet,"Wallet Commission"));
+        }
+        if(user_type.equals("admin"))
+        {
+            rechargeServices.add(new RechargeServices(R.drawable.lock,"Change Password"));
+            rechargeServices.add(new RechargeServices(R.drawable.wallet,"Wallet Commission"));
+        }
 
         mRecyclerView = (RecyclerView)view.findViewById(R.id.rvSettings);
         mRecyclerView.setHasFixedSize(true);
